@@ -1,0 +1,11 @@
+/* VARIABLES */
+:root{
+    color-scheme: light dark;
+    --white: rgba(255, 255, 255, 100);
+    --white-50-alpha: rgba(255, 255, 255, 0.5);
+    --white-10-alpha: rgba(255, 255, 255, 0.1);
+    --white-5-alpha: rgba(255, 255, 255, 0.05);
+    --black: rgba(0, 0, 0, 100);
+    --black-10-alpha: rgba(0, 0, 0, 0.1);
+    --black-5-alpha: rgba(0, 0, 0, 0.05);
+}
