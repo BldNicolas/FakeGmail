@@ -1,0 +1,41 @@
+header {
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-logo-text-container {
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header-logo {
+    width: 3rem;
+}
+
+.header-logo-text {
+    font-size: large;
+    color: var(--grey-text);
+}
+
+.header-button {
+    width: 20rem;
+    flex-grow: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.header-button-sign-up {
+    background-color: var(--button);
+    color: var(--white);
+}
