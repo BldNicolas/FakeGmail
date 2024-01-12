@@ -3,7 +3,6 @@
 html{
     font-size: 62.5%;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
 }
 body{
     margin: 0;
@@ -19,7 +18,7 @@ h1,h2,h3,h4,p,ul,ol{
     padding: 0;
     margin: 0;
     list-style-type: none;
-    font-weight: normal;
+    font-weight: 300;
 }
 a{
     text-decoration: none;
