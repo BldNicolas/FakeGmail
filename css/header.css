@@ -33,6 +33,7 @@ header {
     justify-content: center;
     text-transform: uppercase;
     font-size: 1.5rem;
+    color: var(--grey-text);
 }
 
 .header-button-sign-up {
