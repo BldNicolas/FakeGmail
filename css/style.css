@@ -1,0 +1,31 @@
+.welcome-page {
+    position: relative;
+    height: 80vh;
+}
+
+.background-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.welcome-content {
+    height: 100%;
+    width: 50rem;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+h1 {
+    color: var(--white);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--black-50-alpha);
+    font-size: 4rem;
+}
+
