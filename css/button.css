@@ -1,0 +1,26 @@
+.default-button {
+    width: 20rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.header-button {
+    color: var(--grey-text);
+}
+
+.button-sign-up {
+    background-color: var(--button);
+    color: var(--white);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--black-50-alpha);
+}
+
+.default-button:hover {
+    filter: brightness(0.8);
+}
