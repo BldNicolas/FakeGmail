@@ -19,21 +19,25 @@
         </div>
         <div class="btn header-button">pour les pros</div>
         <div class="btn header-button">connexion</div>
-        <div class="btn header-button button-sign-up">créer un compte</div>
+        <a href="#createAccountForm">
+            <div class="btn header-button button-sign-up">créer un compte</div>
+        </a>
     </header>
     <main>
         <div class="welcome-page">
             <img src="./asset/home-hero.jpg" class="background-picture" alt="fond arriere plan">
             <div class="welcome-content">
                 <h1>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h1>
-                <div class="btn button-sign-up">creer un compte</div>
+                <a href="#createAccountForm">
+                    <div class="btn button-sign-up">creer un compte</div>
+                </a>
             </div>
         </div>
         <div class="inbox-container">
             <h2>Une boîte de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
         </div>
-        <div class="form">
+        <div id="createAccountForm" class="form">
             <div class="form__title">Créer un compte</div>
             <form action="/ma-page-de-traitement" method="post">
                 <ul class="form__content">
