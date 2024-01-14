@@ -17,9 +17,13 @@
             <img src="./asset/images.png" alt="logo gmail" class="header-logo">
             <div class="header-logo-text">Gmail</div>
         </div>
-        <div class="btn btn__square btn--white text--uppercase">pour les pros</div>
-        <div class="btn btn__square btn--white text--uppercase">connexion</div>
-        <a href="#createAccountForm">
+        <a href="#signUpForm">
+            <div class="btn btn__square btn--white text--uppercase">pour les pros</div>
+        </a>
+        <a href="./connexion.html">
+            <div class="btn btn__square btn--white text--uppercase">connexion</div>
+        </a>
+        <a href="#signUpForm">
             <div class="btn btn__square btn--red text--uppercase">créer un compte</div>
         </a>
     </header>
@@ -33,7 +37,7 @@
             <img src="./asset/home-hero.jpg" class="background-picture" alt="fond arriere plan">
             <div class="welcome-content">
                 <h1>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h1>
-                <a href="#createAccountForm">
+                <a href="#signUpForm">
                     <div class="btn btn__square btn--red text--uppercase">créer un compte</div>
                 </a>
             </div>
@@ -42,9 +46,9 @@
             <h2>Une boîte de réception entièrement repensée</h2>
             <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
         </div>
-        <div id="createAccountForm" class="form">
+        <div id="signUpForm" class="form">
             <div class="form__title">Créer un compte</div>
-            <form action="/ma-page-de-traitement" method="post">
+            <form action="./connexion.html" method="post">
                 <ul class="form__content">
                     <li class="form__question">
                         <label class="form__label" for="lastName">Nom : *</label>
