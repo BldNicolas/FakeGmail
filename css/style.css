@@ -72,6 +72,7 @@
 
     .form__input {
         padding: 1rem;
+        color: var(--black);
         background-color: var(--light-grey);
         border-bottom: 0.1rem solid var(--black-10-alpha);
     }
