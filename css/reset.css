@@ -22,7 +22,6 @@ h1,h2,h3,h4,p,ul,ol{
 }
 a{
     text-decoration: none;
-    color: var(--black);
 }
 button, input{
     padding: 0;
