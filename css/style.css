@@ -94,6 +94,11 @@ h2 {
     font-size: 3rem;
 }
 
+h3 {
+    color: var(--black);
+    font-size: 2rem;
+}
+
 p {
     font-size: 1.4rem;
 }
