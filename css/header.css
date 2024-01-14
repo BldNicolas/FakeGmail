@@ -21,5 +21,5 @@ header {
 
 .header-logo-text {
     font-size: large;
-    color: var(--grey-text);
+    color: var(--grey);
 }
