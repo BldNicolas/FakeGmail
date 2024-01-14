@@ -4,39 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="./css/style-theme.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/variable.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/button.css">
     <title>FakeGmail</title>
 </head>
 <body>
     <header>
-        <img src="./asset/images.png" alt="logo gmail">
-        <div>gmail</div>
-        <div>pour les pros</div>
-        <div>connexion</div>
-        <div>créer un compte</div>
+        <div class="header-logo-text-container">
+            <img src="./asset/images.png" alt="logo gmail" class="header-logo">
+            <div class="header-logo-text">Gmail</div>
+        </div>
+        <a href="./index.html#signUpForm"></a>
+        <div class="btn btn__square btn--white text--uppercase">pour les pros</div>
+        <a href="./connexion.html">
+            <div class="btn btn__square btn--white text--uppercase">connexion</div>
+        </a>
+        <a href="./index.html#signUpForm">
+            <div class="btn btn__square btn--red text--uppercase">créer un compte</div>
+        </a>
     </header>
     <main>
-        <h4>Bienvenue dans votre espace null</h4>
-        <div>Connectez-vous à votre compte</div>
-        <form action="/ma-page-de-traitement" method="post">
-            <ul>
-                <li>
-                    <label for="mail">Mail&nbsp;:</label>
-                    <input type="email" id="mail" name="user_mail" />
-                </li>
-                <li>
-                    <label for="password">Mot de passe&nbsp;:</label>
-                    <input type="password" id="password" name="user_password"></input>
-                </li>
-                <li>
-                    <input type="submit" value="Envoyer">
-                </li>
-                </ul>
-        </form>
+        <h3>Bienvenue dans votre espace null</h3>
+        <div id="logInForm" class="form">
+            <div class="form__title">Connectez-vous à votre compte</div>
+            <form action="./connexion.html" method="post">
+                <ul class="form__content">
+                    <li class="form__question">
+                        <label class="form__label" for="mail">Mail : *</label>
+                        <input class="form__input" type="email" id="mail" name="user_mail" placeholder="Votre mail"/>
+                    </li>
+                    <li class="form__question">
+                        <label class="form__label" for="password">Mot de passe : *</label>
+                        <input class="form__input" type="password" id="password" name="user_password" placeholder="Votre mot de passe"/>
+                    </li>
+                    <li class="form__submit">
+                        <input class="btn btn__square btn--blue text--uppercase" type="submit" value="Envoyer">
+                    </li>
+                    </ul>
+            </form>
+        </div>
     </main>
     <footer>
     </footer>
