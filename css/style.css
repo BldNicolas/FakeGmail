@@ -96,3 +96,7 @@ h2 {
 p {
     font-size: 1.4rem;
 }
+
+.text--uppercase {
+    text-transform: uppercase;
+}
