@@ -2,13 +2,13 @@
 <html lang="fr">
 
 <?php
-    include_once __DIR__ ."/pages/head.inc.php";
+    include_once __DIR__ ."/pages/index/head.inc.php";
 ?>
 <body>
 <?php
-    include_once __DIR__ ."/pages/header.inc.php";
-    include_once __DIR__ ."/pages/main.inc.php";
-    include_once __DIR__ ."/pages/footer.inc.php";
+    include_once __DIR__ ."/pages/index/header.inc.php";
+    include_once __DIR__ ."/pages/index/main.inc.php";
+    include_once __DIR__ ."/pages/index/footer.inc.php";
 ?>
 </body>
 </html>
