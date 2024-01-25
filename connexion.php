@@ -7,6 +7,7 @@
 <body>
 <?php
     include_once __DIR__ ."/pages/connexion/header.inc.php";
+    include_once __DIR__ ."/pages/connexion/main.inc.php";
 ?>
 </body>
 </html>
