@@ -6,7 +6,7 @@
     <a href="#signUpForm">
         <div class="btn btn__square btn--white text--uppercase">pour les pros</div>
     </a>
-    <a href="./connexion.html">
+    <a href="./connexion.php">
         <div class="btn btn__square btn--white text--uppercase">connexion</div>
     </a>
     <a href="#signUpForm">
