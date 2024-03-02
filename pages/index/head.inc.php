@@ -4,4 +4,5 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="./css/style.css">
     <title>FakeGmail</title>
+    <script src="./script/script.js"></script>
 </head>
