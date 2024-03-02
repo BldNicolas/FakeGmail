@@ -1,0 +1,28 @@
+.notification {
+    width: auto;
+    height: 6rem;
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    z-index: 9999;
+    opacity: 0;
+}
+
+.notification--success {
+    background-color: var(--success-bg);
+    border-color: var(--success-border);
+}
+
+.notification--error {
+    background-color: var(--error-bg);
+    border: 0.2rem solid;
+    border-color: var(--error-border);
+    color: var(--white);
+}
