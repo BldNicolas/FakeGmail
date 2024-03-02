@@ -19,11 +19,11 @@ function showNotification(message, type) {
 
     setTimeout(() => {
         fadeIn(notificationElement);
-    }, 500);
+    }, 200);
 
     setTimeout(() => {
         notificationElement.remove();
-    }, 50000);
+    }, 5000);
 }
 
 function fadeIn(object) {
