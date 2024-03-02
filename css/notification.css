@@ -1,6 +1,6 @@
 .notification {
-    width: auto;
-    height: 6rem;
+    max-width: 30vw;
+    min-height: 6rem;
     position: fixed;
     top: 6rem;
     right: 0;
