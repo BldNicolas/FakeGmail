@@ -14,4 +14,9 @@
     --button: rgb(221, 83, 71);
     --background: rgb(250, 250, 250);
     --blue: rgb(0, 98, 255);
+    --success-bg: rgb(198, 255, 153);
+    --success-border: rgb(124, 173, 91);
+    --error-bg: rgb(255, 146, 135);
+    --error-border: rgb(211, 123, 113);
+
 }

@@ -2,6 +2,7 @@
 @import url("./variable.css");
 @import url("./header.css");
 @import url("./button.css");
+@import url("./notification.css");
 
 .welcome-page {
     position: relative;
