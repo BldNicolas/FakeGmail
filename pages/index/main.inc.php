@@ -18,8 +18,11 @@
         <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
     </div>
     <div id="signUpForm" class="form">
+        <?php
+        include_once 'controller/UserManager.php';
+        ?>
         <div class="form__title">Créer un compte</div>
-        <form action="./connexion.html" method="post">
+        <form method="post">
             <ul class="form__content">
                 <li class="form__question">
                     <label class="form__label" for="lastName">Nom : *</label>
