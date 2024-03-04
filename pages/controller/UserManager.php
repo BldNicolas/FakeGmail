@@ -117,7 +117,7 @@ class UserManager
             }
 
             if (!filter_var($userMail, FILTER_VALIDATE_EMAIL)) {
-                echo "<script>showNotification('Veuillez rentrer une adresse email valide.', 'error');</script>";
+                echo "<script>showNotification('Veuillez rentrer une adresse mail valide.', 'error');</script>";
                 return;
             }
 
@@ -129,7 +129,7 @@ class UserManager
                 $checkRequest->execute();
 
                 if ($checkRequest->rowCount() > 0) {
-                    echo "<script>showNotification('Cette adresse email est déjà renseignée, veuillez vous connectez.', 'error');</script>";
+                    echo "<script>showNotification('Cette adresse mail est déjà renseignée, veuillez vous connectez.', 'error');</script>";
                     return;
                 }
             } catch (PDOException $e) {
@@ -148,7 +148,11 @@ class UserManager
                 $request->bindParam(4, $hashedPassword);
                 $request->execute();
 
-                echo "<script>showNotification('Inscription réussi.', 'success');</script>";
+                $_SESSION['user_created'] = 'true';
+                $_SESSION['user_last_name'] = $userLastName;
+                $_SESSION['user_first_name'] = $userFirstName;
+                $_SESSION['user_mail'] = $userMail;
+
                 header("Location: connexion.php");
             } catch (PDOException $e) {
                 $error = $e->getMessage();
