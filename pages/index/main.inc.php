@@ -19,7 +19,13 @@
     </div>
     <div id="signUpForm" class="form">
         <?php
-        include_once 'controller/UserManager.php';
+        use pages\controller\UserManager;
+
+        include_once './pages/controller/UserManager.php';
+
+        UserManager::createDB(UserManager::dbName);
+        UserManager::createTable("user", UserManager::dbName);
+        UserManager::signUp();
         ?>
         <div class="form__title">Créer un compte</div>
         <form method="post">
