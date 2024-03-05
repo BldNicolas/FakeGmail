@@ -1,5 +1,5 @@
 <?php
-namespace index\controller;
+namespace pages\controller;
 
 use PDO;
 use PDOException;
@@ -14,7 +14,7 @@ class UserManager
     /**
      * Check if the database exist
      * @param string $dbName Name of the database to check
-     * @return bool true if existed, false if not
+     * @return bool True if existed, false if not
      */
     static function checkDBExists(string $dbName): bool
     {
@@ -75,8 +75,8 @@ class UserManager
 
     /**
      * Create the tables of the database
-     * @param string $tableName name of the table
-     * @param string $dbName name of the database
+     * @param string $tableName Name of the table
+     * @param string $dbName Name of the database
      * @return void
      */
     static function createTable(string $tableName, string $dbName)
@@ -101,9 +101,10 @@ class UserManager
     }
 
     /**
+     * Get the data, check it and store it in the database
      * @return void
      */
-    static function insertUser()
+    static function signUp()
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $userLastName = trim($_POST["user_last_name"]);
@@ -160,7 +161,52 @@ class UserManager
             }
         }
     }
+
+    /**
+     * Get the data and compare it with the database
+     * @return void
+     */
+    static function logIn()
+    {
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $userEmail = trim($_POST["user_mail"]);
+            $userPassword = trim($_POST["user_password"]);
+        }
+        if (isset($userEmail, $userPassword)) {
+            if (UserManager::checkLogin($userEmail, $userPassword)) {
+                echo "<script>showNotification('Connexion réussie.', 'success');</script>";
+            } else {
+                echo "<script>showNotification('Identifiants incorrects.', 'error');</script>";
+            }
+        }
+
+    }
+
+    /**
+     * Check user login credentials
+     * @param string $email User email
+     * @param string $password User password
+     * @return bool True if credentials are valid, false otherwise
+     */
+    static function checkLogin(string $email, string $password): bool
+    {
+        try {
+            $connexion = new PDO("mysql:host=".self::dbAddress.";dbname=".self::dbName, self::dbUser, self::dbPassword);
+            $connexion->setAttribute(\PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $request = $connexion->prepare("SELECT * FROM user WHERE mail = ?");
+            $request->bindParam(1, $email);
+            $request->execute();
+
+            if ($request->rowCount() > 0) {
+                $userData = $request->fetch(PDO::FETCH_ASSOC);
+                return password_verify($password, $userData['password']);
+            }
+
+            return false;
+        } catch (PDOException $e) {
+            echo "<script>showNotification('Une erreur est survenue, veuillez réessayer plus tard.', 'error');</script>";
+            return false;
+        }
+    }
 }
-UserManager::createDB(UserManager::dbName);
-UserManager::createTable("user", UserManager::dbName);
-UserManager::insertUser();
