@@ -1,0 +1,13 @@
+@import url("common/reset.css");
+@import url("common/variable.css");
+@import url("common/header.css");
+@import url("common/button.css");
+@import url("common/notification.css");
+@import url("common/form.css");
+@import url("common/text.css");
+
+.vertical__full {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
