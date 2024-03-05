@@ -3,7 +3,6 @@ let intervalID = 0;
 function showNotification(message, type) {
     const notificationElement = document.createElement("div");
     notificationElement.classList.add("notification");
-    notificationElement.setAttribute('id', 'notification');
 
     if (type === 'success') {
         notificationElement.classList.add("notification--success");
@@ -11,33 +10,24 @@ function showNotification(message, type) {
         notificationElement.classList.add("notification--error");
     }
 
+    notificationElement.innerHTML = '<i class="fa-solid fa-xmark notification__icon"></i>';
+
     const messageElement = document.createElement("p");
     messageElement.textContent = message;
+
     notificationElement.appendChild(messageElement);
+
+    setTimeout(hideNotification, 5000)
 
     document.body.appendChild(notificationElement);
 
-    setTimeout(() => {
-        fadeIn(notificationElement);
-    }, 200);
-
-    setTimeout(() => {
-        notificationElement.remove();
-    }, 5000);
+    notificationElement.addEventListener("click", hideNotification);
 }
 
-function fadeIn(object) {
-    setInterval(show, 10, object);
-}
-
-function show(object) {
-    const element = document.getElementById(object.id);
-    opacity = Number(window.getComputedStyle(element)
-        .getPropertyValue("opacity"));
-    if (opacity < 1) {
-        opacity = opacity + 0.05;
-        element.style.opacity = opacity
-    } else {
-        clearInterval(intervalID);
-    }
+function hideNotification() {
+    const notificationElement = document.querySelector(".notification");
+    notificationElement.classList.add("notification--hide");
+    setTimeout( () => {
+        notificationElement.parentNode.removeChild(notificationElement);
+    }, 1000);
 }
