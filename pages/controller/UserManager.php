@@ -173,7 +173,7 @@ class UserManager
             $userPassword = trim($_POST["user_password"]);
         }
         if (isset($userEmail, $userPassword)) {
-            if (UserManager::checkLogin($userEmail, $userPassword)) {
+            if (UserManager::checkLogIn($userEmail, $userPassword)) {
                 echo "<script>showNotification('Connexion réussie.', 'success');</script>";
             } else {
                 echo "<script>showNotification('Identifiants incorrects.', 'error');</script>";
@@ -188,7 +188,7 @@ class UserManager
      * @param string $password User password
      * @return bool True if credentials are valid, false otherwise
      */
-    static function checkLogin(string $email, string $password): bool
+    static function checkLogIn(string $email, string $password): bool
     {
         try {
             $connexion = new PDO("mysql:host=".self::dbAddress.";dbname=".self::dbName, self::dbUser, self::dbPassword);
