@@ -13,8 +13,8 @@
     gap: 1rem;
     font-size: 0.8rem;
     border-radius: 1rem;
-    z-index: 9999;
-    opacity: 0;
+    cursor: pointer;
+    animation: fadeIn 1s;
 }
 
 .notification--success {
@@ -29,4 +29,23 @@
     border: 0.2rem solid;
     border-color: var(--error-border);
     color: var(--white);
+}
+
+.notification--hide {
+    opacity: 0;
+    animation: fadeOut 1s;
+}
+
+.notification__icon {
+    font-size: large;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
