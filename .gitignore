@@ -1,2 +1,4 @@
 #Ignore les fichiers d'afffichage du finder
 .DS_Store
+#Ignore les fichiers idea
+.idea
