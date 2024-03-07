@@ -1,5 +1,3 @@
-[Publication](https://bldnicolas.github.io/FakeGmail/!index.html)
-
 # Présentation du projet 
 
 Ce projet web est un exemple d'utilisation d'une base de données et d'un formulaire d'inscription et de connexion. La direction artistique est inspirée de Gmail.
