@@ -31,7 +31,7 @@ Ce projet est sous licence MIT.
 ### Liens utiles
 
 [Dépôt GitHub](https://github.com/BldNicolas/FakeGmail/tree/main?tab=readme-ov-file) |
-[Prévisualisation du site](https://bldnicolas.github.io/FakeGmail/!index.html)
+[Prévisualisation du site](https://bldnicolas.github.io/FakeGmail/index.html)
 
 ### Contact
 
